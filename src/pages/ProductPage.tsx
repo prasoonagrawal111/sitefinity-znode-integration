@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 import ProductList, { Product } from '../components/ProductList';
 
 const dummyProducts: Product[] = [
@@ -10,53 +10,9 @@ const dummyProducts: Product[] = [
 ];
 
 function ProductPage() {
-  const navigate = useNavigate();
-  const router = {
-    push: (path: string) => navigate(path)
-  };
-
   return (
     <div className="app-shell">
-      <header className="top-bar">
-        <div className="top-content">
-          <button
-            type="button"
-            className="logo-button"
-            aria-label="Go to home page"
-            onClick={() => router.push('/')}
-          >
-            <div className="logo" aria-label="site logo">
-              HW
-            </div>
-          </button>
-          <input
-            className="search-field"
-            type="text"
-            placeholder="Search by Part # or Name"
-            readOnly
-          />
-          <div className="cart-area" aria-label="cart icon">
-            <span className="cart-icon" aria-hidden="true" />
-            <span>Cart</span>
-          </div>
-        </div>
-      </header>
-
-      <nav className="menu-bar">
-        <ul className="menu-list">
-          <li className="menu-item">
-            <button
-              type="button"
-              className="menu-button"
-              onClick={() => router.push('/product')}
-            >
-              Departments
-            </button>
-          </li>
-          <li className="menu-item">About</li>
-          <li className="menu-item">Brands</li>
-        </ul>
-      </nav>
+      <Header />
 
       <main className="page-content">
         <h1 className="section-title">Products</h1>

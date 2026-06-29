@@ -79,6 +79,45 @@ export async function storeLogout(): Promise<void> {
   window.location.reload();
 }
 
+/**
+ * Departments dropdown — product categories shown in the header.
+ * Mirrors the webstore's "Shop by Department" mega-menu; each links to the
+ * category page by id (`/store/category/<id>`) via full navigation.
+ */
+export const departments: { label: string; href: string }[] = [
+  { label: 'Air Conditioners', href: '/store/category/1829' },
+  { label: 'Cosmetics', href: '/store/category/1828' },
+  { label: 'Plumbing parts & Repair', href: '/store/category/1835' },
+  { label: 'Circular Saw Accessories', href: '/store/category/1849' },
+  { label: 'Fresh Fruits', href: '/store/category/1940' },
+  { label: 'Nothing', href: '/store/category/2323' },
+  { label: 'sadfgh', href: '/store/category/2334' },
+  { label: 'Cello Pant', href: '/store/category/2336' },
+  { label: 'Cello Pen', href: '/store/category/2340' },
+  { label: 'CELLO', href: '/store/category/2341' },
+  { label: 'TestingCategoryQAPI', href: '/store/category/2342' },
+  { label: 'Kids Wear', href: '/store/category/2343' },
+  { label: 'FreshCat2781 QA', href: '/store/category/2344' },
+  { label: 'sub category new', href: '/store/category/2346' },
+  { label: 'New Category', href: '/store/category/2347' },
+  { label: 'Office Supplies', href: '/store/category/2349' },
+  { label: 'Food & Grocery', href: '/store/category/2350' },
+  { label: 'Health & Beauty', href: '/store/category/2353' },
+  { label: 'CMF Charger', href: '/store/category/2359' },
+  { label: 'CMF Headphone', href: '/store/category/2360' },
+  { label: 'CMF By Nothing', href: '/store/category/2361' },
+  { label: 'Samsung', href: '/store/category/2362' },
+  { label: 'Iphone', href: '/store/category/2363' },
+  { label: 'Nokia', href: '/store/category/2364' },
+  { label: 'Mobile', href: '/store/category/2365' },
+  { label: 'CategoryC451', href: '/store/category/2366' },
+  { label: 'Test Category4', href: '/store/category/2367' },
+  { label: 'Test Category3', href: '/store/category/2368' },
+  { label: 'Test Category2', href: '/store/category/2369' },
+  { label: 'Test Category1', href: '/store/category/2370' },
+  { label: 'Fresh202619a', href: '/store/category/2371' },
+];
+
 /** Account dropdown menu — mirrors the webstore's "My Account" menu. */
 export const accountMenu: { label: string; href: string }[] = [
   { label: 'Dashboard', href: '/store/account/dashboard' },
